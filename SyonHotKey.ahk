@@ -95,5 +95,6 @@ Esc::`
 0::F10
 -::F11
 =::F12
+m::AppsKey
 
 #If
