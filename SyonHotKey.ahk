@@ -79,6 +79,10 @@ Enter::^Enter ; 커서를 끝까지 옮기지 않고 그 자리에서 바로 엔
 o::BackSpace
 u::Del
 
+; Move to other monitor
+z::#+Left
+x::#+Right
+
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ; - Function keys
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
