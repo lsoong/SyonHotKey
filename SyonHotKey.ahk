@@ -81,7 +81,8 @@ u::Del
 
 ; Move to other monitor
 z::#+Left
-x::#+Right
+x::#Up
+c::#+Right
 
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ; - Function keys
