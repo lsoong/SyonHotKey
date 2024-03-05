@@ -46,60 +46,36 @@ SetCapsLockState, AlwaysOff
 ;Capslock & f::Capslock
 
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-; - Capslock키를 누르고 있을경우
+; - 한영키를 누르고 있을경우
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-#If GetKeyState("Capslock","P")
+vk15::Return
+RAlt::Return
+#If GetKeyState("vk15","P") || GetKeyState("RAlt","P")
 
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ; - 방향키
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-i::Up
-j::Left
-k::Down
-l::Right
+i::Send {Up}
+j::Send {Left}
+k::Send {Down}
+l::Send {Right}
 
-; 빠르게 이동
-q & j::^Left
-q & l::^Right
+^i:: Send ^{Up}
+^j::Send ^{Left}
+^k::Send ^{Down}
+^l::Send ^{Right}
 
-;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-; - 커맨드
-;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-w::PgUp
-a::Home
-s::PgDn
-d::End
-
-Left::Home
-Right::End
-Up::PgUp
-Down::PgDn
-
-Enter::^Enter ; 커서를 끝까지 옮기지 않고 그 자리에서 바로 엔터처리
-o::BackSpace
-u::Del
-
-; Move to other monitor
-z::#+Left
-x::#Up
-c::#+Right
-
-;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-; - Function keys
-;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Esc::`
-1::F1
-2::F2
-3::F3
-4::F4
-5::F5
-6::F6
-7::F7
-8::F8
-9::F9
-0::F10
--::F11
-=::F12
-m::AppsKey
+; ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+; ; - 커맨드
+; ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+u::Home
+o::End
 
 #If
+
+CapsLock::Send, {LWin Down}{Space}{LWin Up}
+
+<!BS:: Send {Del}
+
+
+
