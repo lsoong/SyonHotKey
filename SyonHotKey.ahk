@@ -36,19 +36,20 @@ PrintScreen::Return
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ; - 기본 capslock기능을 꺼둠
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SetCapsLockState, AlwaysOff
-*CapsLock::Return
-~*CapsLock up::SetCapsLockState, Off
+; SetCapsLockState, AlwaysOff
+; *CapsLock::Return
+; ~*CapsLock up::SetCapsLockState, Off
 
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ; - capslock + f 키로 기본 capslock를 키고 끔
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;Capslock & f::Capslock
+; CapsLock::Send, {LWin Down}{Space}{LWin Up}
 
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ; - 한영키를 누르고 있을경우
 ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-vk15::Return
+; vk15::Return
 RAlt::Return
 #If GetKeyState("vk15","P") || GetKeyState("RAlt","P")
 
@@ -73,7 +74,7 @@ o::End
 
 #If
 
-CapsLock::Send, {LWin Down}{Space}{LWin Up}
+Capslock::Send, {vk15sc138}
 
 <!BS:: Send {Del}
 
