@@ -66,6 +66,15 @@ l::Send {Right}
 ^k::Send ^{Down}
 ^l::Send ^{Right}
 
++i:: Send +{Up}
++j::Send +{Left}
++k::Send +{Down}
++l::Send +{Right}
+
++^i:: Send +^{Up}
++^j::Send +^{Left}
++^k::Send +^{Down}
++^l::Send +^{Right}
 ; ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ; ; - 커맨드
 ; ;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
